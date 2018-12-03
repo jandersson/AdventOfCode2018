@@ -16,7 +16,6 @@ for claim in claims:
             for y in range(claim_pos[1], claim_pos[1] + claim_dims[1]):
                 fabric[y][x]['claimed_by'].append(claim_id)
                 fabric[y][x]['num_claims'] += 1
-claimaints = set(claimaints)
 sole_claimant = None
 num_contested_inches = 0
 for row in fabric:
@@ -27,4 +26,4 @@ for row in fabric:
                 if claimaint in claimaints:
                     claimaints.remove(claimaint)
 print(f"Number of square inches with 2 claims or more: {num_contested_inches}")
-print(f"Sole claimaint: {claimaints}")
+print(f"Sole claimaint: {claimaints[0]}")
