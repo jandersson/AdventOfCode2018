@@ -22,8 +22,8 @@ for row in fabric:
     for col in row:
         if col['num_claims'] > 1:
             num_contested_inches += 1
-            for claimaint in col['claimed_by']:
-                if claimaint in claimants:
-                    claimants.remove(claimaint)
+            for claimant in col['claimed_by']:
+                if claimant in claimants:
+                    claimants.remove(claimant)
 print(f"Number of square inches with 2 claims or more: {num_contested_inches}")
 print(f"Sole claimant: {claimants[0]}")
