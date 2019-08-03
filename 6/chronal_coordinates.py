@@ -2,7 +2,7 @@
 
 
 class Matrix:
-    """Homebrewed matrix class"""
+    """Home brewed matrix class"""
     def __init__(self, x_len: int = 0, y_len: int = 0):
         if not x_len and y_len:
             # Empty matrix initializer
