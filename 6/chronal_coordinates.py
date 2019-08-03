@@ -12,7 +12,7 @@ class Matrix:
         elif y_len == 0:
             raise ValueError('A matrix cannot have a row without a column')
         else:
-            self._matrix = [[] * x_len] * y_len
+            self._matrix = [[None] * x_len] * y_len
 
     def __repr__(self):
         out = ''
@@ -87,6 +87,8 @@ with open('input.txt') as indata:
             for coords in indata.readlines()]
 
 if __name__ == '__main__':
-    m = Matrix(3,3)
+    m = Matrix(3, 3)
     print(m)
+    assert m.columns == 3
+    assert m.rows == 3
     m.append_column(1)
